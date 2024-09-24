@@ -57,6 +57,10 @@ h1{
     justify-content: space-between;
     border: solid 1px black;
 }
+.container #erro{
+    text-align: center;
+    color: red;
+}
 .container #func span{
     margin-inline: 15px;
 }
@@ -66,4 +70,11 @@ h1{
 .container #func #check:hover{
     color: green;
 }
-
+@media only screen and (max-width: 768px){
+    .container{
+        width: 100%;
+    }
+    .container input{
+        width: 70%;
+    }
+}

@@ -2,7 +2,11 @@ function adicionar() {
     let valorInput = document.querySelector('input');
     let lista = document.createElement('li');
 
-    lista.innerHTML = `${valorInput.value} <div id="func">
+    if(!valorInput.value){
+        document.querySelector('#erro').innerHTML = 'Vazio, adicione ulguma tarefa'
+    } else{
+        document.querySelector('#erro').innerHTML = ''
+        lista.innerHTML = `${valorInput.value} <div id="func">
             <span id="check" onclick="concluir(this)"><i class="fa-solid fa-square-check"></i></span>
             <span id="trash" onclick="apagar(this)"><i class="fa-solid fa-trash-can"></i></span>
         </div>`;
@@ -10,6 +14,9 @@ function adicionar() {
     document.querySelector('ul').appendChild(lista);
 
     valorInput.value = '';
+    }
+
+    
 }
 
 function apagar(elemento) {
