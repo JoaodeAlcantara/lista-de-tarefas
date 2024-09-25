@@ -4,7 +4,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     let valorInput = document.querySelector('input');
     let lista = document.createElement('li');
 
-    if (!valorInput.value ||  valorInput.value === ' ') {
+    if (!valorInput.value || valorInput.value === ' ') {
         document.querySelector('#erro').innerHTML = 'Vazio, adicione alguma tarefa'
     } else {
         document.querySelector('#erro').innerHTML = ''
@@ -26,16 +26,7 @@ function apagar(elemento) {
 
 function concluir(elemento) {
     let item = elemento.parentElement.parentElement;
-
-    if (elemento.style.color === '') {
-        item.style.backgroundColor = 'rgba(13, 27, 42, 1)';
-        item.style.color = 'white';
-        item.style.textDecoration = 'line-through';
-        elemento.style.color = 'green';
-    } else {
-        item.style.backgroundColor = '';
-        item.style.color = '';
-        item.style.textDecoration = 'none';
-        elemento.style.color = '';
-    }
+    item.classList.toggle('concluido') 
+    elemento.style.color = item.classList.contains('concluido') ? 'green' : '' 
 }
+

@@ -1,28 +1,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     background-color: rgb(0, 0, 0, 0.9);
     height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: "Poppins", system-ui;;
+    font-family: "Poppins", system-ui;
+    ;
 }
-h1{
+
+h1 {
     text-align: center;
     margin: 5px;
 }
-.container{
+.container {
     margin: auto;
     padding: 10px;
     width: 520px;
     background-color: white;
     border-radius: 10px;
 }
-.container form #input-tarefa{
+
+.container form #input-tarefa {
     width: 400px;
     outline: none;
     padding: 8px;
@@ -30,7 +35,8 @@ h1{
     margin: 10px;
     border: 1px solid;
 }
-.container form #add-tarefa{
+
+.container form #add-tarefa {
     margin: 10px;
     height: 40px;
     width: 40px;
@@ -38,17 +44,20 @@ h1{
     padding: 5px;
     border: 1px solid;
 }
-.container #add-tarefa:hover{
+
+.container #add-tarefa:hover {
     background-color: rgba(13, 27, 42, 1);
     color: white;
     border-radius: 10px;
     transition: 0.4s;
 }
-.container ul{
+
+.container ul {
     list-style: none;
     margin: 10px;
 }
-.container li{
+
+.container li {
     margin-bottom: 10px;
     padding: 8px;
     display: flex;
@@ -57,24 +66,36 @@ h1{
     justify-content: space-between;
     border: solid 1px black;
 }
-.container #erro{
+
+.concluido {
+    background-color: rgba(13, 27, 42, 1);
+    color: white;
+    text-decoration: line-through;
+}
+
+.container #erro {
     text-align: center;
     color: red;
 }
-.container #func span{
+
+.container #func span {
     margin-inline: 15px;
 }
-.container #func .trash:hover{
+
+.container #func .trash:hover {
     color: red;
 }
-.container #func .check:hover{
+
+.container #func .check:hover {
     color: rgb(101, 101, 101);
 }
-@media only screen and (max-width: 768px){
-    .container{
+
+@media only screen and (max-width: 768px) {
+    .container {
         width: 100%;
     }
-    .container #input-tarefa{
+
+    .container #input-tarefa {
         max-width: 70%;
     }
 }
