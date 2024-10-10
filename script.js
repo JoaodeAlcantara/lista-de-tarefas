@@ -11,6 +11,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
         }, 2000)
 
     } else {
+        document.querySelector('#erro').innerHTML = ''
         lista.innerHTML = `${valorInput.value} <div id="func">
             <span class="check" onclick="concluir(this)"><i class="fa-solid fa-square-check"></i></span>
             <span class="trash" onclick="apagar(this)"><i class="fa-solid fa-trash-can"></i></span>
